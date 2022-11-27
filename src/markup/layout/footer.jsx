@@ -49,7 +49,7 @@ class aboutSection extends Component{
 											<span className="icon-cell"><img src={icon2} alt=""/></span> 
 										</div>
 										<div className="icon-content">
-											<Link to="/contact-1" className="btn btn-dark text-white">Contact Us</Link>
+											<Link to="/contact-1" className="btn btn-warning">Contact Us</Link>
 										</div>
 									</div>
 								</div>
@@ -80,7 +80,7 @@ class aboutSection extends Component{
 											<li><Link to="#">Oil And Filters</Link></li>
 											<li><Link to="/services">Our Services</Link></li>
 											<li><Link to="#">Belts And Hoses</Link></li>
-											<li><Link to="/pricing-plan">Pricing Plan</Link></li>
+											<li><Link to="/servicing">Servicing</Link></li>
 											<li><Link to="#">Brake Repair</Link></li>
 											<li><Link to="/team">Out Team</Link></li>
 											<li><Link to="#">Air Conditioning</Link></li>

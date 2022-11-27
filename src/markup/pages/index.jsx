@@ -1,48 +1,51 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 // Layout
-//import Header from "../layout/header";
+import Header from "../layout/header";
 import Footer from "../layout/footer";
 
 // Elements
-import Header from "../layout/header";
-import SliderOneSection from "../elements/home-slider/slider1";
 import AboutUsOneSection from "../elements/about-us-1";
 import ServicesSection from "../elements/services-1";
-import ChooseUsSection from "../elements/choose-us";
 import ScheduleServiceSection from "../elements/schedule-service";
-import TeamOneSection from "../elements/team-1";
-import TestimonialSection from "../elements/testimonial";
 import LatestBlogSection from "../elements/latest-blog-slider";
 
-class Index extends Component{
-	
-	
-	render(){
-		
+// Images
+import bnrImg from "../../images/banner/1st-slide.jpg";
+
+class Index extends Component {
+
+
+	render() {
+
 		return (
 			<>
-			
+
 				<Header />
-				
-				<SliderOneSection />
-				
-				<AboutUsOneSection />
-				
-				<ServicesSection />
-				
-				<ChooseUsSection />
-				
-				<ScheduleServiceSection />
-				
-				<TeamOneSection />
-				
-				<TestimonialSection />
-				
-				<LatestBlogSection />
-				
+
+				<div className="page-content bg-white">
+
+					<div className="page-banner ovbl-dark" style={{ backgroundImage: "url(" + bnrImg + ")" }}>
+						<div className="container">
+							<div className="page-banner-entry home text-center text-white">
+								<h1><span>JTT Autotech</span></h1>
+								<h2 className="title">Service, Repair and MOT centre</h2>
+							</div>
+						</div>
+					</div>
+
+					<AboutUsOneSection />
+
+					<ServicesSection />
+
+					<ScheduleServiceSection />
+
+					<LatestBlogSection />
+
+				</div>
+
 				<Footer />
-				
+
 			</>
 		);
 	}

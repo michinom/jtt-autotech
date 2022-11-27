@@ -230,7 +230,7 @@ class Booking extends Component {
 												<li><Link to="/about-1">About Us <i className="las la-question-circle"></i></Link></li>
 												<li><Link to="/service-1">Our Services <i className="las la-cog"></i></Link></li>
 												<li><Link to="/job-career">Job & Career<i className="las la-user-plus"></i></Link></li>
-												<li><Link to="/pricing-plan">Pricing<i className="las la-table"></i></Link></li>
+												<li><Link to="/servicing">Servicing<i className="las la-table"></i></Link></li>
 												<li><Link to="/team">Our Team<i className="las la-user-tie"></i></Link></li>
 												<li className="active"><Link to="/booking">Booking<i className="lab la-wpforms"></i></Link></li>
 												<li><Link to="/terms-of-use">Terms of Use<i className="las la-quote-left"></i></Link></li>

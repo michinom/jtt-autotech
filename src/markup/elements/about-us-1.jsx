@@ -15,7 +15,8 @@ class AboutUsOneSection extends Component {
 						<div className="row align-items-center">
 							<div className="col-lg-5 mb-40">
 								<div className="heading-bx mb-4">
-									<h2 className="title">ALL MAKE VEHICLE SERVICE AND MOT CENTRE</h2>
+								<h6 className="title-ext text-primary">ALL MAKE VEHICLE SERVICE AND MOT CENTRE</h6>
+									<h2 className="title">WHY CHOOSE US</h2>
 									<p>JTT Autotech specialise in service and repairs on all makes of motor vehicle</p>
 									<ul className="list-check-squer mb-50 mb-sm-30">
 										<li>Established since 2001</li>

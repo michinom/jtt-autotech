@@ -25,7 +25,7 @@ import JobCareer from './pages/job-career';
 import Login from './pages/login';
 import Register from './pages/register';
 import ForgetPassword from './pages/forget-password';
-import PricingPlan from './pages/pricing-plan';
+import Servicing from './pages/servicing';
 import Services from './pages/service-1';
 import Services2 from './pages/service-2';
 import ServiceAirConditioning from './pages/service-air-conditioning';
@@ -65,7 +65,7 @@ class Markup extends Component{
 						<Route path='/login' exact component={Login} />
 						<Route path='/register' exact component={Register} />
 						<Route path='/forget-password' exact component={ForgetPassword} />
-						<Route path='/pricing-plan' exact component={PricingPlan} />
+						<Route path='/servicing' exact component={Servicing} />
 						<Route path='/service-1' exact component={Services} />
 						<Route path='/service-2' exact component={Services2} />
 						<Route path='/service-air-conditioning' exact component={ServiceAirConditioning} />

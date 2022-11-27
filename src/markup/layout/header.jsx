@@ -70,11 +70,7 @@ class aboutSection extends Component{
 									</div>
 									<ul className="nav navbar-nav">	
 										<li className="active">
-											<Link to="#">Home<i className="fa fa-chevron-down"></i></Link>
-											<ul className="sub-menu">
-												<li><Link to="/"><span>Home 1</span> </Link></li>
-												<li><Link to="/index-2"><span>Home 2</span></Link></li>
-											</ul>
+											<Link to="/">Home</Link>
 										</li>
 										<li className="has-mega-menu "><Link to="#">Pages<i className="fa fa-chevron-down"></i></Link>
 											<ul className="mega-menu">
@@ -102,7 +98,7 @@ class aboutSection extends Component{
 														<li><Link to="/booking"><span>Booking</span></Link></li>
 														<li><Link to="/gallery-1"><span>Gallery 1</span></Link></li>
 														<li><Link to="/gallery-2"><span>Gallery 2</span></Link></li>
-														<li><Link to="/pricing-plan"><span>Pricing Plan</span></Link></li>
+														<li><Link to="/servicing"><span>Servicing</span></Link></li>
 													</ul>
 												</li>
 												<li>

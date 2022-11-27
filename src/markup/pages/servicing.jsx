@@ -12,7 +12,9 @@ import PartnerShipsSection from "../elements/partnerships2";
 // Images
 import bnrImg from "../../images/banner/bnr3.jpg";
 
-class PricingPlan extends Component{
+const pageName = "Servicing";
+
+class Servicing extends Component{
 	
 	render(){
 		return (
@@ -25,11 +27,11 @@ class PricingPlan extends Component{
 					<div className="page-banner ovbl-dark" style={{backgroundImage: "url("+bnrImg+")"}}>
 						<div className="container">
 							<div className="page-banner-entry text-center">
-								<h1><span>Pricing Plan</span></h1>
+								<h1><span>{pageName}</span></h1>
 								<nav aria-label="breadcrumb" className="breadcrumb-row">
 									<ul className="breadcrumb">
 										<li className="breadcrumb-item"><Link to="/"><i className="las la-home"></i>Home</Link></li>
-										<li className="breadcrumb-item active" aria-current="page">Pricing Plan</li>
+										<li className="breadcrumb-item active" aria-current="page">{pageName}</li>
 									</ul>
 								</nav>
 							</div>
@@ -49,4 +51,4 @@ class PricingPlan extends Component{
 	}
 }
 
-export default PricingPlan;
+export default Servicing;

@@ -121,7 +121,7 @@ class JobCareer extends Component{
 												<li><a href="about-1.html">About Us <i className="las la-question-circle"></i></a></li>
 												<li><a href="service-1.html">Our Services <i className="las la-cog"></i></a></li>
 												<li className="active"><a href="job-career.html">Job & Career<i className="las la-user-plus"></i></a></li>
-												<li><a href="pricing-plan.html">Pricing<i className="las la-table"></i></a></li>
+												<li><a href="servicing.html">Servicing<i className="las la-table"></i></a></li>
 												<li><a href="team.html">Our Team<i className="las la-user-tie"></i></a></li>
 												<li><a href="booking.html">Booking<i className="lab la-wpforms"></i></a></li>
 												<li><a href="terms-of-use.html">Terms of Use<i className="las la-quote-left"></i></a></li>
