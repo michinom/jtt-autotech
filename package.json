@@ -24,6 +24,7 @@
     "react-slick": "^0.28.1",
     "react-stickynode": "^4.1.0",
     "react-swiper": "^0.1.5",
+    "react-toastify": "^9.0.3",
     "react-visibility-sensor": "^5.1.1",
     "sass": "^1.56.1",
     "simple-react-lightbox": "^3.6.9-0",

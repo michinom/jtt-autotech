@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import emailjs from '@emailjs/browser';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 // Layout
 import Header from "../layout/header";
@@ -10,31 +12,56 @@ import Footer from "../layout/footer";
 import bnrImg from "../../images/banner/bnr4.jpg";
 
 class Booking extends Component {
+	
 	constructor(props) {
 		super(props);
 		this.myRef = React.createRef();
 
+		const toastifySuccess = () => {
+			toast.success('Message Sent! Thank you', {
+				position: "top-right",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: "colored",
+			});
+		};
+
+		const toastifyFail = () => {
+			toast.error('Oops there was a problem sending the message. Please call us on 01707 658899 to let us know!', {
+				position: "top-right",
+				autoClose: 5000,
+				hideProgressBar: false,
+				closeOnClick: true,
+				pauseOnHover: true,
+				draggable: true,
+				progress: undefined,
+				theme: "colored",
+			});
+		};
+
 		this.sendEmail = (e) => {
 			e.preventDefault();
 
-			emailjs.sendForm('service_67oig34', 'template_7y8cxxr', this.myRef.current, 'ZTeLzksJ-kmEf3kit')
+			emailjs.sendForm('service_67oig34', 'template_7y8cxxr', this.myRef.current, 'ZTeLzksJ-kmEf3ki')
 				.then((result) => {
 					console.log(result.text);
 					console.log("Message Sent!");
-					alert("Email sent successfully!");
+					toastifySuccess();
 				}, (error) => {
 					console.log(error.text);
-					alert("FAILED!"+error);
-				});
+					toastifyFail();
+				})
 		};
 	}
 
 
 	render() {
-
 		return (
 			<>
-
 				<Header />
 
 				<div className="page-content bg-white">
@@ -57,7 +84,7 @@ class Booking extends Component {
 						<div className="container">
 							<div className="row">
 								<div className="col-lg-8 col-md-7 mb-30 mb-md-50">
-									<form className="booking-form" ref={this.myRef} onSubmit={this.sendEmail}>
+									<form className="booking-form ajax-form" ref={this.myRef} onSubmit={this.sendEmail}>
 										<div className="row">
 											<div className="col-lg-4">
 												<div className="form-group">
@@ -181,21 +208,21 @@ class Booking extends Component {
 											<div className="col-lg-6">
 												<div className="form-group">
 													<div className="input-group">
-														<input name="name" type="text" className="form-control" placeholder="Name" required />
+														<input name="name" type="text" required className="form-control" placeholder="Name" />
 													</div>
 												</div>
 											</div>
 											<div className="col-lg-6">
 												<div className="form-group">
 													<div className="input-group">
-														<input name="phone" type="email" placeholder="Email" className="form-control" required />
+														<input name="phone" type="email" required className="form-control" placeholder="Email" />
 													</div>
 												</div>
 											</div>
 											<div className="col-lg-6">
 												<div className="form-group">
 													<div className="input-group">
-														<input name="phone" type="tel" placeholder="Phone Number" className="form-control" required />
+														<input name="phone" type="tel" required className="form-control" placeholder="Phone Number" />
 													</div>
 												</div>
 											</div>
@@ -209,13 +236,10 @@ class Booking extends Component {
 											<div className="col-lg-12">
 												<div className="form-group">
 													<div className="input-group">
-														<textarea name="message" rows="4" className="form-control" required="" placeholder="Type Message"></textarea>
+														<textarea name="message" rows="4" required="" className="form-control" placeholder="Type Message"></textarea>
 													</div>
 												</div>
 											</div>
-											{/*}<div class="alert alert-success" role="alert">
-												This is a success alert—check it out!
-		</div>*/}
 											<div className="col-lg-12">
 												<button name="submit" type="submit" value="Submit" className="btn btn-primary btn-lg"> Send Message</button>
 											</div>
@@ -241,6 +265,7 @@ class Booking extends Component {
 							</div>
 						</div>
 					</section>
+					<ToastContainer />
 
 				</div>
 

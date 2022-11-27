@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import emailjs from '@emailjs/browser';
 
 // Layout
 import Header from "../layout/header";
@@ -8,6 +9,24 @@ import Footer from "../layout/footer";
 import bnrImg from "../../images/banner/bnr1.jpg";
 
 class ContactUs extends Component{
+	constructor(props) {
+		super(props);
+		this.myRef = React.createRef();
+
+		this.sendEmail = (e) => {
+			e.preventDefault();
+
+			emailjs.sendForm('service_67oig34', 'template_7y8cxxr', this.myRef.current, 'ZTeLzksJ-kEf3kit')
+				.then((result) => {
+					console.log(result.text);
+					console.log("Message Sent!");
+					alert("Email sent successfully!");
+				}, (error) => {
+					console.log(error.text);
+					alert("Apologies! We appear to have a problem with our form. Please call us on 01707 658899 to let us know");
+				});
+		};
+	}
 	
 	render(){
 		return (
@@ -29,7 +48,7 @@ class ContactUs extends Component{
 						<div className="container">		
 							<div className="row">
 								<div className="col-lg-12 col-md-12">
-									<form className="contact-form ajax-form" action="script/contact.php">
+									<form className="contact-form ajax-form" ref={this.myRef} onSubmit={this.sendEmail}>
 										<div className="heading-bx mb-20">
 											<h6 className="title-ext text-primary">Contact Form</h6>
 											<h2 className="title mb-0">SEND A MESSAGE</h2>

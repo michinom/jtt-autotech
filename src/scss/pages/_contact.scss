@@ -30,6 +30,9 @@
 		&:focus{
 			border-color: $primary;
 		}
+		&:invalid{
+			border-color: $danger;
+		}
 	}
 	.input-group textarea.form-control {
 		height: 150px;
