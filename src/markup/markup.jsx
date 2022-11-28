@@ -17,7 +17,7 @@ import BlogListSidebar from './pages/blog-list-sidebar';
 import BlogMasonry from './pages/blog-masonry';
 import Booking from './pages/booking';
 import ContactUs from './pages/contact-1';
-import ContactUs2 from './pages/contact-2';
+import Contact from './pages/contact';
 import Tos from './pages/terms-of-use';
 import Gallery from './pages/gallery-1';
 import Gallery2 from './pages/gallery-2';
@@ -57,7 +57,7 @@ class Markup extends Component{
 						<Route path='/blog-masonry' exact component={BlogMasonry} />
 						<Route path='/booking' exact component={Booking} />
 						<Route path='/contact-1' exact component={ContactUs} />
-						<Route path='/contact-2' exact component={ContactUs2} />
+						<Route path='/contact' exact component={Contact} />
 						<Route path='/terms-of-use' exact component={Tos} />
 						<Route path='/gallery-1' exact component={Gallery} />
 						<Route path='/gallery-2' exact component={Gallery2} />

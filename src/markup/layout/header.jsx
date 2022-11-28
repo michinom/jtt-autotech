@@ -61,7 +61,7 @@ class aboutSection extends Component{
 									<span></span>
 								</button>
 								<div className="secondary-menu">
-									<span>01707 658899</span>
+									<span className="btn btn-outline-light" style={{pointerEvents: 'none'}}>01707 658899</span>
 									<Link to="/booking" className="btn btn-primary ms-3">Booking</Link>
 								</div>
 								<div className="menu-links navbar-collapse collapse justify-content-center" id="menuDropdown">
@@ -107,7 +107,7 @@ class aboutSection extends Component{
 														<li><Link to="/error-404"><span>Error 404</span></Link></li>
 														<li><Link to="/login"><span>Login / Register</span></Link></li>
 														<li><Link to="/contact-1"><span>Contact Us 1</span></Link></li>
-														<li><Link to="/contact-2"><span>Contact Us 2</span></Link></li>
+														<li><Link to="/contact"><span>Contact Us</span></Link></li>
 													</ul>
 												</li>
 											</ul>
@@ -136,11 +136,7 @@ class aboutSection extends Component{
 												<li><Link to="/blog-details"><span>Blog Details</span></Link></li>
 											</ul>
 										</li>
-										<li><Link to="#">Contact Us <i className="fa fa-chevron-down"></i></Link>
-											<ul className="sub-menu left">
-												<li><Link to="/contact-1"><span>Contact Us 1</span></Link></li>
-												<li><Link to="/contact-2"><span>Contact Us 2</span></Link></li>
-											</ul>
+										<li><Link to="/contact">Contact Us</Link>
 										</li>
 									</ul>
 									<ul className="social-media">
