@@ -6,7 +6,11 @@ import Sticky from 'react-stickynode';
 import logo from "../../images/logo.png";
 import logoWhite from "../../images/logo-white.png";
 
+const telareacode = "01707";
+const telnumber1 = "658899";
+
 class aboutSection extends Component{
+
 	
 	componentDidMount(){
 		
@@ -61,7 +65,7 @@ class aboutSection extends Component{
 									<span></span>
 								</button>
 								<div className="secondary-menu">
-									<span className="btn btn-outline-light" style={{pointerEvents: 'none'}}>01707 658899</span>
+								<a href={"tel:"+telareacode+telnumber1}><span className="btn btn-outline-light">{telareacode + " " + telnumber1}</span></a>
 									<Link to="/booking" className="btn btn-primary ms-3">Booking</Link>
 								</div>
 								<div className="menu-links navbar-collapse collapse justify-content-center" id="menuDropdown">
@@ -71,6 +75,12 @@ class aboutSection extends Component{
 									<ul className="nav navbar-nav">	
 										<li className="active">
 											<Link to="/">Home</Link>
+										</li>
+										<li>
+											<Link to="/mot">MOT</Link>
+										</li>
+										<li>
+											<Link to="/servicing">Servicing</Link>
 										</li>
 										<li className="has-mega-menu "><Link to="#">Pages<i className="fa fa-chevron-down"></i></Link>
 											<ul className="mega-menu">
@@ -96,8 +106,6 @@ class aboutSection extends Component{
 													<Link to="#">Pages</Link>
 													<ul>
 														<li><Link to="/booking"><span>Booking</span></Link></li>
-														<li><Link to="/gallery-1"><span>Gallery 1</span></Link></li>
-														<li><Link to="/gallery-2"><span>Gallery 2</span></Link></li>
 														<li><Link to="/servicing"><span>Servicing</span></Link></li>
 													</ul>
 												</li>
@@ -105,9 +113,8 @@ class aboutSection extends Component{
 													<Link to="#">Pages</Link>
 													<ul>
 														<li><Link to="/error-404"><span>Error 404</span></Link></li>
-														<li><Link to="/login"><span>Login / Register</span></Link></li>
 														<li><Link to="/contact-1"><span>Contact Us 1</span></Link></li>
-														<li><Link to="/contact"><span>Contact Us</span></Link></li>
+														<li><Link to="/contact-us"><span>Contact Us</span></Link></li>
 													</ul>
 												</li>
 											</ul>
@@ -127,16 +134,7 @@ class aboutSection extends Component{
 												</li>
 											</ul>
 										</li>
-										<li><Link to="#">Blog <i className="fa fa-chevron-down"></i></Link>
-											<ul className="sub-menu left">
-												<li><Link to="/blog-grid"><span>Blog Grid</span></Link></li>
-												<li><Link to="/blog-grid-sidebar"><span>Blog Grid Sidebar</span></Link></li>
-												<li><Link to="/blog-masonry"><span>Blog Masonry</span></Link></li>
-												<li><Link to="/blog-list-sidebar"><span>Blog List Sidebar</span></Link></li>
-												<li><Link to="/blog-details"><span>Blog Details</span></Link></li>
-											</ul>
-										</li>
-										<li><Link to="/contact">Contact Us</Link>
+										<li><Link to="/contact-us">Contact</Link>
 										</li>
 									</ul>
 									<ul className="social-media">

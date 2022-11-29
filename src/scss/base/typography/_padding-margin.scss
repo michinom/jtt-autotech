@@ -316,7 +316,7 @@
 }
 // Section Space 
 .section-sp1{
-	padding-top:100px;
+	padding-top:70px;
 	padding-bottom:70px;
 	@include respond('tab-land'){
 		padding-top:80px;
@@ -332,8 +332,8 @@
 	}
 }
 .section-sp2{
-	padding-top:100px;
-	padding-bottom:100px;
+	padding-top:70px;
+	padding-bottom:70px;
 	@include respond('tab-land'){
 		padding-top:80px;
 		padding-bottom:80px;

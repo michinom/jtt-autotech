@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 // Elements
 import BackToTop from './elements/back-top';
@@ -7,24 +7,14 @@ import PageScrollTop from './elements/page-scroll-top';
 
 // All Pages Router
 import Index from './pages/index';
-import Index2 from './pages/index-2';
+import Mot from './pages/mot';
 import AboutUs from './pages/about-1';
 import AboutUs2 from './pages/about-2';
-import BlogDetails from './pages/blog-details';
-import BlogGrid from './pages/blog-grid';
-import BlogGridSidebar from './pages/blog-grid-sidebar';
-import BlogListSidebar from './pages/blog-list-sidebar';
-import BlogMasonry from './pages/blog-masonry';
 import Booking from './pages/booking';
 import ContactUs from './pages/contact-1';
-import Contact from './pages/contact';
+import Contact from './pages/contact-us';
 import Tos from './pages/terms-of-use';
-import Gallery from './pages/gallery-1';
-import Gallery2 from './pages/gallery-2';
 import JobCareer from './pages/job-career';
-import Login from './pages/login';
-import Register from './pages/register';
-import ForgetPassword from './pages/forget-password';
 import Servicing from './pages/servicing';
 import Services from './pages/service-1';
 import Services2 from './pages/service-2';
@@ -42,43 +32,32 @@ class Markup extends Component{
 	render(){
 		return(
 			<>
-				<BrowserRouter basename={'/react/'}>
+				<BrowserRouter>
 				
-					<Switch>
-					
-						<Route path='/' exact component={Index} />
-						<Route path='/index-2' exact component={Index2} />
-						<Route path='/about-1' exact component={AboutUs} />
-						<Route path='/about-2' exact component={AboutUs2} />
-						<Route path='/blog-details' exact component={BlogDetails} />
-						<Route path='/blog-grid' exact component={BlogGrid} />
-						<Route path='/blog-grid-sidebar' exact component={BlogGridSidebar} />
-						<Route path='/blog-list-sidebar' exact component={BlogListSidebar} />
-						<Route path='/blog-masonry' exact component={BlogMasonry} />
-						<Route path='/booking' exact component={Booking} />
-						<Route path='/contact-1' exact component={ContactUs} />
-						<Route path='/contact' exact component={Contact} />
-						<Route path='/terms-of-use' exact component={Tos} />
-						<Route path='/gallery-1' exact component={Gallery} />
-						<Route path='/gallery-2' exact component={Gallery2} />
-						<Route path='/job-career' exact component={JobCareer} />
-						<Route path='/login' exact component={Login} />
-						<Route path='/register' exact component={Register} />
-						<Route path='/forget-password' exact component={ForgetPassword} />
-						<Route path='/servicing' exact component={Servicing} />
-						<Route path='/service-1' exact component={Services} />
-						<Route path='/service-2' exact component={Services2} />
-						<Route path='/service-air-conditioning' exact component={ServiceAirConditioning} />
-						<Route path='/service-belts-and-hoses' exact component={ServiceBeltsAndHoses} />
-						<Route path='/service-brake-repair' exact component={ServiceBrakeRepair} />
-						<Route path='/service-engine-diagnostics' exact component={ServiceEngineDiagnostics} />
-						<Route path='/service-lube-oil-and-filters' exact component={ServiceLubeOilAndFilters} />
-						<Route path='/service-tire-and-wheel-services' exact component={ServiceTireAndWheelServices} />
-						<Route path='/team' exact component={Team} />
-						<Route path='/team-details' exact component={TeamDetails} />
-						<Route component={Error} />
+					<Routes>
+						<Route path='/' element={<Index/>} />
+						<Route path='/mot' element={<Mot/>} />
+						<Route path='/about-1' element={<AboutUs/>} />
+						<Route path='/about-2' element={<AboutUs2/>} />
+						<Route path='/booking' element={<Booking/>} />
+						<Route path='/contact-1' element={<ContactUs/>} />
+						<Route path='/contact-us' element={<Contact/>} />
+						<Route path='/terms-of-use' element={<Tos/>} />
+						<Route path='/job-career' element={<JobCareer/>} />
+						<Route path='/servicing' element={<Servicing/>} />
+						<Route path='/service-1' element={<Services/>} />
+						<Route path='/service-2' element={<Services2/>} />
+						<Route path='/service-air-conditioning' element={<ServiceAirConditioning/>} />
+						<Route path='/service-belts-and-hoses' element={<ServiceBeltsAndHoses/>} />
+						<Route path='/service-brake-repair' element={<ServiceBrakeRepair/>} />
+						<Route path='/service-engine-diagnostics' element={<ServiceEngineDiagnostics/>} />
+						<Route path='/service-lube-oil-and-filters' element={<ServiceLubeOilAndFilters/>} />
+						<Route path='/service-tire-and-wheel-services' element={<ServiceTireAndWheelServices/>} />
+						<Route path='/team' element={<Team/>} />
+						<Route path='/team-details' element={<TeamDetails/>} />
+						<Route element={<Error/>} />
 						
-					</Switch>
+					</Routes>
 					
 					<PageScrollTop />
 					

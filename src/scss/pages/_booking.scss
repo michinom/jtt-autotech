@@ -41,9 +41,6 @@
 		&:focus{
 			border-color: $primary;
 		}
-		&:invalid{
-			border-color: $danger;
-		}
 	}
 	textarea.form-control{
 		height:220px;

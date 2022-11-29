@@ -34,10 +34,10 @@ function Booking() {
 				<section className="section-area section-sp1">
 					<div className="container">
 						<div className="row">
-							<div className="col-lg-8 col-md-7 mb-30 mb-md-50">
+							<div className="col-lg-12 col-md-7 mb-30 mb-md-50">
 								<BookingForm />
 							</div>
-							<div className="col-lg-4 col-md-5 mb-30">
+							{/*<div className="col-lg-4 col-md-5 mb-30">
 								<aside className="sticky-top">
 									<div className="widget">
 										<h5 className="widget-title">Our Inner Pages</h5>
@@ -73,7 +73,7 @@ function Booking() {
 										</ul>
 									</div>
 								</aside>
-							</div>
+	</div>*/}
 						</div>
 					</div>
 				</section>

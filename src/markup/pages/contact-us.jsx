@@ -1,7 +1,8 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState, useCallback } from 'react'
 import emailjs from '@emailjs/browser';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import ReCAPTCHA from "react-google-recaptcha";
 
 // Layout
 import Header from "../layout/header";
@@ -9,9 +10,24 @@ import Footer from "../layout/footer";
 
 // Images
 import bnrImg from "../../images/banner/bnr1.jpg";
+import aboutPic2 from "../../images/about/pic2.jpg";
+
 
 function Contact() {
+	
+	//ReCaptcha
+	const setCaptchaToken = useState(null);
+	const captchaRef = useRef(null);
 
+	const [disableSubmit,setDisableSubmit] = useState(true);
+
+	const verify = () => {
+		captchaRef.current.getResponse().then(res => {
+			setCaptchaToken(res)
+		})
+	}
+
+	//Alert
 	const toastifySuccess = () => {
 		toast.success('Message Sent! Thank you', {
 			position: "top-right",
@@ -38,12 +54,13 @@ function Contact() {
 		});
 	};
 
+	//emailjs
 	const form = useRef();
 
 	const sendEmail = (e) => {
 		e.preventDefault();
 
-		emailjs.sendForm('service_67oig34', 'template_7y8cxxr', form.current, 'ZTeLzksJ-kmEf3ki')
+		emailjs.sendForm('service_67oig34', 'template_7y8cxxr', form.current, 'ZTeLzksJ-kmEf3kit')
 			.then((result) => {
 				console.log(result.text);
 				console.log("Message Sent!");
@@ -71,10 +88,9 @@ function Contact() {
 				<section className="section-area section-sp2">
 					<div className="container">
 						<div className="row">
-							<div className="col-lg-12 col-md-12">
+							<div className="col-lg-8 col-md-12">
 								<form className="contact-form ajax-form" ref={form} onSubmit={sendEmail}>
 									<div className="heading-bx mb-20">
-										<h6 className="title-ext text-primary">Contact Form</h6>
 										<h2 className="title mb-0">SEND A MESSAGE</h2>
 									</div>
 									<div className="row">
@@ -86,7 +102,7 @@ function Contact() {
 														type="text"
 														required className="form-control valid-character"
 														placeholder="Your Name"
-														/>
+													/>
 												</div>
 											</div>
 										</div>
@@ -98,7 +114,7 @@ function Contact() {
 														type="email"
 														className="form-control"
 														required placeholder="Your Email Address"
-														/>
+													/>
 												</div>
 											</div>
 										</div>
@@ -110,7 +126,7 @@ function Contact() {
 														type="text"
 														required className="form-control int-value"
 														placeholder="Your Phone"
-														/>
+													/>
 												</div>
 											</div>
 										</div>
@@ -123,24 +139,39 @@ function Contact() {
 														className="form-control"
 														placeholder="Type Message"
 														required
-														>
+													>
 													</textarea>
 												</div>
 											</div>
 										</div>
+										<div className="col-lg-12 mb-4">
+											<ReCAPTCHA
+												sitekey="6LcP6fwSAAAAAHs_NhZ08q3VKVZe1JGkDk8kQLOA"
+												ref={captchaRef}
+												onChange={useCallback(() => setDisableSubmit(false),[])}
+												onVerify={verify}
+											/>
+										</div>
 										<div className="col-lg-12">
-											<button name="submit" type="submit" value="Submit" className="btn btn-primary btn-lg"> Send Message</button>
+											<button name="submit" type="submit" value="Submit" className="btn btn-primary btn-lg" disabled={disableSubmit}> Send Message</button>
 										</div>
 									</div>
 								</form>
 								<ToastContainer />
+							</div>
+							<div className="col-lg-4 col-md-5 mb-30">
+								<aside>
+									<div className="media">
+										<img src={aboutPic2} alt="" />
+									</div>
+								</aside>
 							</div>
 						</div>
 					</div>
 				</section>
 
 				<div className="section-area">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3448.1298878182047!2d-81.38369578541523!3d30.204840081824198!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e437ac927a996b%3A0x799695b1a2b970ab!2sNona+Blue+Modern+Tavern!5e0!3m2!1sen!2sin!4v1548177305546" className="align-self-stretch d-flex"
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2472.9013809776834!2d-0.17791468421387738!3d51.698249779666924!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487622ba364e3779%3A0x15d37ecb0e1a125e!2sJTT%20Autotech%20Ltd!5e0!3m2!1sen!2suk!4v1669674319260!5m2!1sen!2suk" className="align-self-stretch d-flex"
 						style={{ width: "100%", minHeight: "450px" }} title="map" allowfullscreen></iframe>
 				</div>
 

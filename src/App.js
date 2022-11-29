@@ -1,10 +1,6 @@
 import React from "react";
 import Markup from './markup/markup';
 
-// Slick Carousel
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-
 // React Modal Video
 import 'react-modal-video/css/modal-video.min.css';
 

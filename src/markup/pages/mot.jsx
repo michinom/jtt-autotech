@@ -6,18 +6,16 @@ import Header from "../layout/header";
 import Footer from "../layout/footer";
 
 // Elements
-import PricingTableSection from "../elements/pricing-table";
-import BookingForm from "../elements/booking-form";
-
-//mport PartnerShipsSection from "../elements/partnerships2";
+import AboutUsOneSection from "../elements/about-us-1";
+import ServicesSection from "../elements/services-1";
+import TeamTwoSection from "../elements/team-2";
 
 // Images
 import bnrImg from "../../images/banner/bnr3.jpg";
 
-const pageName = "Servicing";
+const pageName = "MOT";
 
-function Servicing() {
-
+function Mot() {
 	return (
 		<>
 
@@ -39,17 +37,20 @@ function Servicing() {
 					</div>
 				</div>
 
-				<PricingTableSection />
+				{/*<SliderTwoSection />*/}
 
-				<section className="section-area section-sp1">
-					<div className="container">
-						<div className="row">
-							<div className="col-lg-12 col-md-7 mb-30 mb-md-50">
-								<BookingForm />
-							</div>
-						</div>
-					</div>
-				</section>
+				{/*<PartnerShipsSection />*/}
+
+				<AboutUsOneSection />
+
+				{/*<AboutUsFourSection />*/}
+
+				<ServicesSection />
+
+				{/*<FeatureThreeSection />*/}
+
+				<TeamTwoSection />
+
 
 			</div>
 
@@ -59,4 +60,4 @@ function Servicing() {
 	);
 }
 
-export default Servicing;
+export default Mot;

@@ -6,8 +6,11 @@ import logo2 from '../../images/logo2.png';
 import icon1 from '../../images/icon/contact/icon1.png';
 import icon2 from '../../images/icon/contact/icon2.png';
 import icon3 from '../../images/icon/contact/icon3.png';
-import recentBlogPic1 from '../../images/blog/recent-blog/pic1.jpg';
-import recentBlogPic2 from '../../images/blog/recent-blog/pic2.jpg';
+
+const telareacode = "01707";
+const telnumber1 = "658899";
+const telnumber2 = "647755";
+
 
 class aboutSection extends Component{
 	render(){
@@ -39,7 +42,7 @@ class aboutSection extends Component{
 											<span className="icon-cell"><img src={icon1} alt=""/></span> 
 										</div>
 										<div className="icon-content">
-											<p>01707 658899<br/>01707 647755</p>
+											<p>{telareacode} {telnumber1}<br/>{telareacode} {telnumber2}</p>
 										</div>
 									</div>
 								</div>
@@ -49,7 +52,7 @@ class aboutSection extends Component{
 											<span className="icon-cell"><img src={icon2} alt=""/></span> 
 										</div>
 										<div className="icon-content">
-											<Link to="/contact-1" className="btn btn-warning">Contact Us</Link>
+											<Link to="/contact-us" className="btn btn-warning">Contact Us</Link>
 										</div>
 									</div>
 								</div>
@@ -59,18 +62,18 @@ class aboutSection extends Component{
 					<div className="footer-top bt0">
 						<div className="container">
 							<div className="row">
-								<div className="col-xl-3 col-md-6">
+								<div className="col-xl-4 col-md-6">
 									<div className="widget footer_widget">
 										<h5 className="footer-title">Company</h5>
 										<p className="mb-20">Need a special repair service? we are happy to fulfil every request in order to exceed your expectations</p>
 										<div className="ft-content">
 											<i className="fa fa-phone"></i>
 											<span>Talk To Our Team</span>
-											<h4>01707 658899</h4>
+											<h4>{telareacode} {telnumber1}</h4>
 										</div>
 									</div>
 								</div>
-								<div className="col-xl-3 col-md-6">
+								<div className="col-xl-4 col-md-6">
 									<div className="widget widget-link-2">
 										<h5 className="footer-title">Our Solutions</h5>
 										<ul>
@@ -89,36 +92,7 @@ class aboutSection extends Component{
 										</ul>							
 									</div>
 								</div>
-								<div className="col-xl-3 col-md-6">
-									<div className="widget recent-posts-entry">
-										<h5 className="footer-title">Latest news</h5>
-										<div className="widget-post-bx">
-											<div className="widget-post clearfix">
-												<div className="ttr-post-media"> 
-													<img src={recentBlogPic1} alt=""/> 
-												</div>
-												<div className="ttr-post-info">
-													<h6 className="post-title"><Link to="/blog-details">Precious Tips To Help You Get Better.</Link></h6>
-													<ul className="post-meta">
-														<li className="date"><Link to="/blog-details"><i className="fa fa-calendar"></i> 15 Aug 2021</Link></li>
-													</ul>
-												</div>
-											</div>
-											<div className="widget-post clearfix">
-												<div className="ttr-post-media"> 
-													<img src={recentBlogPic2} alt=""/> 
-												</div>
-												<div className="ttr-post-info">
-													<h6 className="post-title"><Link to="/blog-details">Ten Doubts You Should Clarify About.</Link></h6>
-													<ul className="post-meta">
-														<li className="date"><Link to="/blog-details"><i className="fa fa-calendar"></i> 15 Aug 2021</Link></li>
-													</ul>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div className="col-xl-3 col-md-6">
+								<div className="col-xl-4 col-md-6">
 									<div className="widget widget_info">
 										<h5 className="footer-title">Subscribe Now</h5>
 										<p className="mb-20">Weekly Breaking News Analysis And Cutting Edge Advices On Job Searching.</p>

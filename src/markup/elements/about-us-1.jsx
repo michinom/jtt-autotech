@@ -7,6 +7,9 @@ import pic2 from "../../images/about/pic6.jpg";
 
 function AboutUsOneSection() {
 
+	const telareacode = "01707";
+	const telnumber1 = "658899";
+
 	return (
 		<>
 
@@ -34,9 +37,9 @@ function AboutUsOneSection() {
 								</div>
 								<div className="about-contact bg-primary text-white">
 									<h6 className="title-ext text-white">Call Today</h6>
-									<h3 className="number mb-15 text-white">01707 647 755</h3>
+									<h3 className="number mb-15 text-white">{telareacode} {telnumber1}</h3>
 									<p className="mb-20">or</p>
-									<Link to="/booking" className="btn btn-light">BOOK AN APPOINTMENT</Link>
+									<Link to="/booking" className="btn btn-warning">BOOK A SERVICE</Link>
 								</div>
 							</div>
 						</div>

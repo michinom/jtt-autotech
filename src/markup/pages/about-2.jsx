@@ -11,7 +11,6 @@ import ChooseUsSection from "../elements/choose-us";
 import ScheduleServiceSection from "../elements/schedule-service";
 import TeamTwoSection from "../elements/team-2";
 import TestimonialSection from "../elements/testimonial";
-import LatestBlogSection from "../elements/latest-blog-slider";
 
 // Images
 import bnrImg from "../../images/banner/bnr2.jpg";
@@ -49,7 +48,6 @@ class AboutUs2 extends Component{
 					
 					<TestimonialSection />
 					
-					<LatestBlogSection />
 					
 				</div>
 				
