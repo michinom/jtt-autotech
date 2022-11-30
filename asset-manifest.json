@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/jtt-autotech/static/css/main.e507b7cb.css",
-    "main.js": "/jtt-autotech/static/js/main.022538e8.js",
+    "main.js": "/jtt-autotech/static/js/main.813b96f6.js",
     "static/js/496.5c9d47f0.chunk.js": "/jtt-autotech/static/js/496.5c9d47f0.chunk.js",
     "static/media/la-brands-400.svg": "/jtt-autotech/static/media/la-brands-400.928495fae14841a0d610.svg",
     "static/media/la-solid-900.svg": "/jtt-autotech/static/media/la-solid-900.a813034654b4ff0a0bac.svg",
@@ -69,11 +69,11 @@
     "static/media/bg-map.png": "/jtt-autotech/static/media/bg-map.b76ab82fdb728f2fb8a8.png",
     "index.html": "/jtt-autotech/index.html",
     "main.e507b7cb.css.map": "/jtt-autotech/static/css/main.e507b7cb.css.map",
-    "main.022538e8.js.map": "/jtt-autotech/static/js/main.022538e8.js.map",
+    "main.813b96f6.js.map": "/jtt-autotech/static/js/main.813b96f6.js.map",
     "496.5c9d47f0.chunk.js.map": "/jtt-autotech/static/js/496.5c9d47f0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e507b7cb.css",
-    "static/js/main.022538e8.js"
+    "static/js/main.813b96f6.js"
   ]
 }
