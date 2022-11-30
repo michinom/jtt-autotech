@@ -33,7 +33,6 @@ class Markup extends Component{
 		return(
 			<>
 				<HashRouter>
-				
 					<Routes>
 						<Route path='/' element={<Index/>} />
 						<Route path='/mot' element={<Mot/>} />
@@ -55,7 +54,7 @@ class Markup extends Component{
 						<Route path='/service-tire-and-wheel-services' element={<ServiceTireAndWheelServices/>} />
 						<Route path='/team' element={<Team/>} />
 						<Route path='/team-details' element={<TeamDetails/>} />
-						<Route element={<Error/>} />
+						<Route path="*" element={<Error/>} />
 						
 					</Routes>
 					
