@@ -35,26 +35,26 @@ class Markup extends Component{
 				<BrowserRouter>
 				
 					<Routes>
-						<Route path='/' element={<Index/>} />
-						<Route path='/mot' element={<Mot/>} />
-						<Route path='/about-1' element={<AboutUs/>} />
-						<Route path='/about-2' element={<AboutUs2/>} />
-						<Route path='/booking' element={<Booking/>} />
-						<Route path='/contact-1' element={<ContactUs/>} />
-						<Route path='/contact-us' element={<Contact/>} />
-						<Route path='/terms-of-use' element={<Tos/>} />
-						<Route path='/job-career' element={<JobCareer/>} />
-						<Route path='/servicing' element={<Servicing/>} />
-						<Route path='/service-1' element={<Services/>} />
-						<Route path='/service-2' element={<Services2/>} />
-						<Route path='/service-air-conditioning' element={<ServiceAirConditioning/>} />
-						<Route path='/service-belts-and-hoses' element={<ServiceBeltsAndHoses/>} />
-						<Route path='/service-brake-repair' element={<ServiceBrakeRepair/>} />
-						<Route path='/service-engine-diagnostics' element={<ServiceEngineDiagnostics/>} />
-						<Route path='/service-lube-oil-and-filters' element={<ServiceLubeOilAndFilters/>} />
-						<Route path='/service-tire-and-wheel-services' element={<ServiceTireAndWheelServices/>} />
-						<Route path='/team' element={<Team/>} />
-						<Route path='/team-details' element={<TeamDetails/>} />
+						<Route exact path='/' element={<Index/>} />
+						<Route exact path='/mot' element={<Mot/>} />
+						<Route exact path='/about-1' element={<AboutUs/>} />
+						<Route exact path='/about-2' element={<AboutUs2/>} />
+						<Route exact path='/booking' element={<Booking/>} />
+						<Route exact path='/contact-1' element={<ContactUs/>} />
+						<Route exact path='/contact-us' element={<Contact/>} />
+						<Route exact path='/terms-of-use' element={<Tos/>} />
+						<Route exact path='/job-career' element={<JobCareer/>} />
+						<Route exact path='/servicing' element={<Servicing/>} />
+						<Route exact path='/service-1' element={<Services/>} />
+						<Route exact path='/service-2' element={<Services2/>} />
+						<Route exact path='/service-air-conditioning' element={<ServiceAirConditioning/>} />
+						<Route exact path='/service-belts-and-hoses' element={<ServiceBeltsAndHoses/>} />
+						<Route exact path='/service-brake-repair' element={<ServiceBrakeRepair/>} />
+						<Route exact path='/service-engine-diagnostics' element={<ServiceEngineDiagnostics/>} />
+						<Route exact path='/service-lube-oil-and-filters' element={<ServiceLubeOilAndFilters/>} />
+						<Route exact path='/service-tire-and-wheel-services' element={<ServiceTireAndWheelServices/>} />
+						<Route exact path='/team' element={<Team/>} />
+						<Route exact path='/team-details' element={<TeamDetails/>} />
 						<Route element={<Error/>} />
 						
 					</Routes>
