@@ -60,7 +60,7 @@ function Contact() {
 	const sendEmail = (e) => {
 		e.preventDefault();
 
-		emailjs.sendForm('service_67oig34', 'template_7y8cxxr', form.current, 'ZTeLzksJ-kmEf3kit')
+		emailjs.sendForm('service_67oig34', 'template_7y8cxxr', form.current, '6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe')
 			.then((result) => {
 				console.log(result.text);
 				console.log("Message Sent!");

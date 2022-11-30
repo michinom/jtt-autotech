@@ -56,7 +56,7 @@ function BookingForm() {
     const sendEmail = (e) => {
         e.preventDefault();
 
-        emailjs.sendForm('service_67oig34', 'template_7y8cxxr', form.current, 'ZTeLzksJ-kmEf3kit')
+        emailjs.sendForm('service_67oig34', 'template_7y8cxxr', form.current, '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI')
             .then((result) => {
                 console.log(result.text);
                 console.log("Message Sent!");
